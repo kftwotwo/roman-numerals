@@ -1,31 +1,28 @@
-1) if 1,000 = M
-input: 1,000
-output: true (M)
+1) get the users input
+input:3
+output:3
+1.1) taking the users input and parseInt and store the value in a variable
 
-2) if more than 1,000 add additional M when it is required
-Input: 3,000
-output: MMM
+2) Set our numerals array. 4 nested arrays inside the numerals array.
 
-3)if 500 = D set to true
-input: 500;
-output: true;
+2.1) write a function to convert the numbers into roman numeral strings
 
-4)if 100 = C set to true
-input: 100;
-output: true;
+3)create an empty string variable for numeral output
 
-5)if 50 = L set to true
-input: 50;
-output: true;
+3.1create variable that takes the userinput number: converts it to individual string elements inside a new array and reverses it.
 
-6)if 10 = X set to true
-input: 10;
-output: true;
+3.2)start loop that begins at 0 and increments by one for the length of the new userinput array.
 
-7)if 5 = V set to true
-input: 5;
-output: true;
+3.3)create new variable equal to the position within the numerals array based on the iteration of the for loop
 
- 8)if 1 = I set to true
- input: 1;
- output: true;
+3.4)numeral equals the first declared position and the parsint of the romannumber based on the iteration
+
+123 is taken as input
+converts to ["3", "2", "1"]
+
+array is 3 positions in length
+[0][3] = "III"
+[1][2] = "XX"
+[2][1] = "C"
+
+concatinat the numeral at that position to the empty variable numeral
