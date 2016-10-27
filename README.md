@@ -26,3 +26,9 @@ array is 3 positions in length
 [2][1] = "C"
 
 concatinat the numeral at that position to the empty variable numeral
+
+
+It will return the letter I for the number 1.
+If input = 1, then it will return I.
+
+It will return III for the number 3.
