@@ -6,16 +6,17 @@ $(document).ready(function() {
     convert(userInput);
     })
 ///////////////////////////////////////////////////////////////////////////////////////////
-var numeralCodes = [["","I","II","III","IV","V","VI","VII","VIII","IX"],         //  9 ones
-                    ["","X","XX","X", "XL", "L", "LX", "LXX", "LXXX", "XC"],   //  90 tens
+var numerals = [["","I","II","III","IV","V","VI","VII","VIII","IX"],         //  9 ones
+                    ["","X","XX","XXX", "XL", "L", "LX", "LXX", "LXXX", "XC"],   //  90 tens
                     ["","C","CC","CCC","CD","D","DC","DCC","DCCC","CM"],// 900 hundreds
                     ["","M","MM", "MMM",]];// 3 thousand
 ////////////////////////////////////////////////////////////////////////////////////////////
-  function convert(num) {
+  function convert(number) {
     var numeral = "";
-    var digits = num.toString().split('').reverse();
-    for (var i=0; i < digits.length; i++){
-      numeral = numeralCodes[i][parseInt(digits[i])] + numeral;
+    var romanNumber = number.toString().split('').reverse();
+    for (var i=0; i < romanNumber.length; i++){
+      var codes = numerals[i];
+      numeral = codes[parseInt(romanNumber[i])] + numeral;
     }
     $("#result").text(numeral);
   }
